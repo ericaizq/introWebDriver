@@ -15,8 +15,9 @@ public class YahooSearchMain {
 
 	public static void main(String[] args) {
 		//INICIALIZACION DE SYSTEM.SETPROPERTY()
+		System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver.exe");
 	    WebDriver driver;
-		driver = new ChromeDriver();
+		driver = new ChromeDriver();  // aqui cambio el navegador que quiera usar
 		driver.manage().timeouts().implicitlyWait(30,  TimeUnit.SECONDS);
 		driver.get("http://www.yahoo.com");
 		WebElement searchBox = driver.findElement(By.id("uh-search-box"));
